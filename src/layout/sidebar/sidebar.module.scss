@@ -1,0 +1,67 @@
+.sidebarContainer {
+  overflow-y: auto;
+  //   display: none;
+  height: 85vh;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  z-index: 999;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.04);
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .navItemTop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    gap: 1rem;
+    padding-bottom: 2.1rem;
+    h3 {
+      color: #213f7d;
+      font-family: Work Sans;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-decoration: none;
+    }
+  }
+
+  .navItem {
+    .navHeader {
+      padding: 1rem 0.2rem;
+      color: #545f7d;
+      font-family: Work Sans;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 0.7rem;
+    }
+
+    .navLink {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 0.7rem;
+      padding: 0.7rem 0.2rem;
+      a {
+        color: #213f7d;
+        font-family: Work Sans;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration: none;
+      }
+    }
+  }
+}

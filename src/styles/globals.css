@@ -3,13 +3,3 @@
   padding: 0;
   overflow-y: hidden;
 }
-
-input:-internal-autofill-selected {
-  appearance: menulist-button;
-  background-image: none !important;
-  background-color: red !important;
-  color: fieldtext !important;
-  padding-block: 1px;
-  padding-inline: 2px;
-  /* Add any additional styles as needed */
-}
