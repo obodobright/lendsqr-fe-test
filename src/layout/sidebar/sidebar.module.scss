@@ -1,9 +1,9 @@
 .sidebarContainer {
   overflow-y: auto;
   //   display: none;
-  height: 85vh;
+  height: 90vh;
   position: fixed;
-  top: 60px;
+  top: 70px;
   left: 0;
   z-index: 999;
   padding: 20px;
@@ -33,6 +33,7 @@
   }
 
   .navItem {
+    list-style-type: none;
     .navHeader {
       padding: 1rem 0.2rem;
       color: #545f7d;

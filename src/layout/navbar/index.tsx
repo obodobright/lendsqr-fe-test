@@ -1,8 +1,9 @@
 import { ProfileTab } from "@/components/profileTab"
 import { Logo } from "../../components/Logo"
 import styles from "./nav.module.scss";
+import { FC } from 'react';
 
-export const Navbar = () => {
+export const Navbar: FC = () => {
     return (
         <nav className={styles.navContainer}>
             <nav className={styles.navBody}>

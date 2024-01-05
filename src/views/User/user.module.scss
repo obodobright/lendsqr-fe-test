@@ -1,0 +1,8 @@
+.userContainer {
+  .cardContainer {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}

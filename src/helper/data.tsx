@@ -121,3 +121,114 @@ export const navItems = [
 
     },
 ]
+
+export const AnalyticsData = [
+    {
+        theme: "#fce8ff",
+        title: "Users",
+        stats: "2,453",
+        icon: "/asset/svg/np_users.svg"
+    },
+    {
+        theme: "#eee8ff",
+        title: "Active Users",
+        stats: "2,453",
+        icon: "/asset/svg/np_users2.svg"
+    },
+    {
+        theme: "#feefec",
+        title: "Users with Loans",
+        stats: "12,453",
+        icon: "/asset/svg/np_loan.svg"
+    },
+    {
+        theme: "#ffebf0",
+        title: "Users with Savings",
+        stats: "102,453",
+        icon: "/asset/svg/np_money.svg"
+    }
+]
+
+export const userData = [
+    {
+        organization: "Lendsqr",
+        username: "Adedeji",
+        email: "adedeji@lendsqr.com",
+        "createdAt": "May 15, 2020 10:00 AM",
+        status: "inactive",
+        phone: "08078903721"
+    },
+    {
+        organization: "Lendsqr",
+        username: "Debby Ogana",
+        email: "debby2@irorun.com",
+        "createdAt": "May 15, 2020 10:00 AM",
+        status: "pending",
+        phone: "08078903721"
+    },
+
+    {
+        organization: "Lendsqr",
+        username: "Adedeji",
+        email: "adedeji@lendsqr.com",
+        "createdAt": "May 15, 2020 10:00 AM",
+        status: "blacklisted",
+        phone: "08078903721"
+    },
+    {
+        organization: "Lendsqr",
+        username: "Adedeji",
+        email: "adedeji@lendsqr.com",
+        "createdAt": "May 15, 2020 10:00 AM",
+        status: "active",
+        phone: "08078903721"
+    },
+    {
+        organization: "Lendsqr",
+        username: "Adedeji",
+        email: "adedeji@lendsqr.com",
+        "createdAt": "May 15, 2020 10:00 AM",
+        status: "active",
+        phone: "08078903721"
+    },
+    {
+        organization: "Lendsqr",
+        username: "Adedeji",
+        email: "adedeji@lendsqr.com",
+        "createdAt": "May 15, 2020 10:00 AM",
+        status: "blacklisted",
+        phone: "08078903721"
+    },
+    {
+        organization: "Lendsqr",
+        username: "Adedeji",
+        email: "adedeji@lendsqr.com",
+        "createdAt": "May 15, 2020 10:00 AM",
+        status: "inactive",
+        phone: "08078903721"
+    },
+    {
+        organization: "Lendsqr",
+        username: "Adedeji",
+        email: "adedeji@lendsqr.com",
+        "createdAt": "May 15, 2020 10:00 AM",
+        status: "inactive",
+        phone: "08078903721"
+    },
+    {
+        organization: "Lendsqr",
+        username: "Adedeji",
+        email: "adedeji@lendsqr.com",
+        "createdAt": "May 15, 2020 10:00 AM",
+        status: "active",
+        phone: "08078903721"
+    },
+    {
+        organization: "Lendsqr",
+        username: "Adedeji",
+        email: "adedeji@lendsqr.com",
+        "createdAt": "May 15, 2020 10:00 AM",
+        status: "pending",
+        phone: "08078903721"
+    },
+] 

@@ -1,7 +1,8 @@
+import { FC } from "react";
 import styles from "./profile.module.scss";
 
 
-export const ProfileTab = () => {
+export const ProfileTab: FC = () => {
     return (
         <section className={styles.profileContainer}>
             <div className={styles.imgContainer}>

@@ -1,12 +1,11 @@
-import { PageTitle } from "@/components/pageTitle";
+import PageTitle from "@/components/pageTitle";
 import { Layout } from "@/layout";
+import UserViews from "@/views/User";
 
 export default function UserRoute() {
     return (
         <Layout>
-            <section>
-                <PageTitle title="Users" />
-            </section>
+            <UserViews />
         </Layout>
     )
 }

@@ -15,7 +15,7 @@ export const Sidebar = () => {
             <ul className={styles.navItem}>
                 <section className={styles.navLink}>
                     <img src="/asset/svg/dashboard.svg" alt="" />
-                    <Link href="/dasboard">Dashboard</Link>
+                    <Link href="/dashboard">Dashboard</Link>
                 </section>
                 {navItems.map((nav, navIndex) => (
                     <li key={navIndex}>

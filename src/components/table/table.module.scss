@@ -1,0 +1,120 @@
+.tableContainer {
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  background: #fff;
+  box-shadow: 3px 5px 20px 0px rgba(0, 0, 0, 0.04);
+  padding: 20px;
+  overflow-x: auto;
+  position: relative;
+  //   overflow-y:;
+
+  &::-webkit-scrollbar {
+    width: 1px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(33, 63, 125, 0.1);
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #f0f0f0;
+  }
+
+  .table {
+    white-space: nowrap;
+    margin-bottom: 1.25rem;
+    border-collapse: separate;
+    width: 100%;
+    overflow-x: auto;
+    thead {
+      width: 100%;
+    }
+    tr {
+      text-align: left;
+      //   background-color: red;
+    }
+    th {
+      span {
+        margin-right: 0.5rem;
+      }
+      svg {
+        // margin-top: -0.6rem;
+        position: relative;
+        top: 3px;
+        cursor: pointer;
+      }
+      position: relative;
+      gap: 0.6rem;
+      padding: 0.75rem;
+      font-size: 0.75rem /* 12px */;
+      line-height: 1rem /* 16px */;
+      color: #545f7d;
+      font-family: Work Sans;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      text-transform: uppercase;
+    }
+    td {
+      padding: 0.75rem;
+      color: #545f7d;
+      font-family: Work Sans;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      border-bottom: 1px solid rgba(33, 63, 125, 0.1);
+    }
+  }
+
+  .Tbody {
+    tr {
+      border: 1px solid red;
+    }
+  }
+}
+
+.DropdownContainer {
+  position: relative;
+
+  .dropdownWrapper {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    z-index: 10;
+    background-color: #fff;
+    transition: all 350ms;
+    border-radius: 4px;
+    border: 1px solid rgba(84, 95, 125, 0.04);
+    background: #fff;
+    box-shadow: 3px 5px 20px 0px rgba(0, 0, 0, 0.04);
+
+    button {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.5rem 1.3rem;
+      border: 0;
+      outline: none;
+      margin: 0.5rem;
+      background-color: #fff;
+
+      &:hover {
+        cursor: pointer;
+        background-color: whitesmoke;
+      }
+
+      span {
+        color: #545f7d;
+        font-family: Work Sans;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+    }
+  }
+}
