@@ -57,7 +57,7 @@ const Table = ({ header, userData }: TableProps) => {
 
         </tbody>
       </table>
-      {show && <Filters setShow={updateShow} />}
+      {show && <Filters />}
     </section>
   </>;
 };
@@ -100,7 +100,7 @@ const Dropdown = ({ user }: { user: any }) => {
           {show && (
             <section className={styles.dropdownWrapper}>
               <button
-                onClick={() => router.push(`/users/${user?.id}`)}
+                onClick={() => router.push(`/users/${1}`)}
               >
                 <img src="/asset/svg/np_view.svg" alt="" />
 

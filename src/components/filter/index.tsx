@@ -1,12 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 import styles from "./filter.module.scss";
 
-interface filterProp {
-    setShow: (show: boolean) => void;
-}
-const Filters = ({ setShow }: filterProp) => {
+const Filters = () => {
 
-    // const menuRef = useRef<HTMLDivElement | null>(null);
     const [inputType, setInputType] = useState('text');
     const handleFocus = () => {
         setInputType('date');
@@ -18,21 +14,6 @@ const Filters = ({ setShow }: filterProp) => {
         }
     };
 
-
-    // useEffect(() => {
-    //     let handler = (e: MouseEvent) => {
-    //         if (!menuRef.current?.contains(e.target as Node)) {
-    //             setShow(false);
-    //         }
-    //     };
-    //     document.addEventListener("mousedown", handler, true);
-
-    //     return () => {
-    //         document.removeEventListener("mousedown", handler);
-    //     };
-    // }, []);
-
-    // ref={menuRef}
     return (
         <section>
             <section className={styles.filterContainer}>
