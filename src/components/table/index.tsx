@@ -3,26 +3,18 @@ import Tags from "../tags";
 import styles from "./table.module.scss";
 import { useRouter } from "next/router";
 import Filters from "../filter";
+import { IUserProp } from "@/types";
+import { determineStatus, formatDate } from "@/helper/utils";
 
 
 interface TableProps {
   header: string[];
-  userData: {
-    organization: string;
-    username: string;
-    email: string;
-    status: string;
-    createdAt: string;
-    phone: string;
-  }[]
+  userData: IUserProp[]
 }
 
 const Table = ({ header, userData }: TableProps) => {
   const [show, setShow] = useState(false);
 
-  const updateShow = (show: boolean) => {
-    setShow(show)
-  }
 
   return <>
     <section className={styles.tableContainer}>
@@ -43,13 +35,13 @@ const Table = ({ header, userData }: TableProps) => {
         <tbody className={styles.Tbody}>
           {userData.map((el, elIndex) => (
             <tr key={elIndex}>
-              <td>{el.organization}</td>
-              <td>{el.username}</td>
-              <td>{el.email}</td>
-              <td>{el.phone}</td>
-              <td>{el.createdAt}</td>
+              <td>{el?.orgName}</td>
+              <td>{el?.userName}</td>
+              <td>{el?.email}</td>
+              <td>{el?.phoneNumber}</td>
+              <td>{formatDate(el?.createdAt)}</td>
               <td>
-                <Tags status={el.status} />
+                <Tags status={determineStatus(elIndex)} />
               </td>
               <Dropdown user={el} />
             </tr>
@@ -100,7 +92,7 @@ const Dropdown = ({ user }: { user: any }) => {
           {show && (
             <section className={styles.dropdownWrapper}>
               <button
-                onClick={() => router.push(`/users/${1}`)}
+                onClick={() => router.push(`/users/${user?.id}`)}
               >
                 <img src="/asset/svg/np_view.svg" alt="" />
 

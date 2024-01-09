@@ -127,7 +127,7 @@ export const AnalyticsData = [
         theme: "#fce8ff",
         title: "Users",
         stats: "2,453",
-        icon: "//asset/svg/np_users.svg"
+        icon: "/asset/svg/np_users.svg"
     },
     {
         theme: "#eee8ff",
