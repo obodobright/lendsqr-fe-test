@@ -85,6 +85,12 @@
         align-items: center;
         justify-content: center;
         border-radius: 50%;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          border-radius: 50%;
+        }
       }
 
       .userName {
@@ -172,6 +178,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    overflow-x: auto;
+    width: 100%;
+    white-space: nowrap;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
     .tabsItems {
       padding: 0 1.2rem;
@@ -234,6 +247,21 @@
       font-style: normal;
       font-weight: 500;
       line-height: normal;
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .detailsContainer {
+    .pageHeaderContainer {
+      flex-wrap: wrap;
+      row-gap: 2rem;
+    }
+    .profileContainer {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 2rem;
     }
   }
 }

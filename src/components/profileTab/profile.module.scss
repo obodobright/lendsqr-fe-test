@@ -17,6 +17,12 @@
       width: 100%;
       border-radius: 50%;
     }
+    .webImg {
+      display: block;
+    }
+    .mobile {
+      display: none;
+    }
   }
   .profileName {
     color: #213f7d;
@@ -25,5 +31,19 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+  }
+}
+
+@media (max-width: 800px) {
+  .profileContainer {
+    .imgContainer {
+      .webImg {
+        display: none;
+      }
+      .mobile {
+        display: block;
+        cursor: pointer;
+      }
+    }
   }
 }

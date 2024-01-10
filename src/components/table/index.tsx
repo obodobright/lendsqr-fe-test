@@ -5,51 +5,56 @@ import { useRouter } from "next/router";
 import Filters from "../filter";
 import { IUserProp } from "@/types";
 import { determineStatus, formatDate } from "@/helper/utils";
+import { PageLoader } from "../Loader";
 
 
 interface TableProps {
   header: string[];
-  userData: IUserProp[]
+  userData: IUserProp[];
+  loading: boolean;
 }
 
-const Table = ({ header, userData }: TableProps) => {
+const Table = ({ header, userData, loading }: TableProps) => {
   const [show, setShow] = useState(false);
 
 
   return <>
     <section className={styles.tableContainer}>
-      <table className={styles.table}>
-        <thead>
-          <tr>
-            {header.map((el, elIndex) => (
-              <th key={elIndex}>
-                <span>{el}</span>
-                <svg onClick={() => setShow(!show)} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path d="M6.22222 13.3333H9.77778V11.5555H6.22222V13.3333ZM0 2.66666V4.44443H16V2.66666H0ZM2.66667 8.88888H13.3333V7.1111H2.66667V8.88888Z" fill="#545F7D" />
-                </svg>
-              </th>
+      {loading ? <PageLoader /> : <>
+        <table className={styles.table}>
+          <thead>
+            <tr>
+              {header.map((el, elIndex) => (
+                <th key={elIndex}>
+                  <span>{el}</span>
+                  <svg onClick={() => setShow(!show)} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M6.22222 13.3333H9.77778V11.5555H6.22222V13.3333ZM0 2.66666V4.44443H16V2.66666H0ZM2.66667 8.88888H13.3333V7.1111H2.66667V8.88888Z" fill="#545F7D" />
+                  </svg>
+                </th>
+              ))}
+
+            </tr>
+          </thead>
+          <tbody className={styles.Tbody}>
+            {userData.map((el, elIndex) => (
+              <tr key={elIndex}>
+                <td>{el?.orgName}</td>
+                <td>{el?.userName}</td>
+                <td>{el?.email}</td>
+                <td>{el?.phoneNumber}</td>
+                <td>{formatDate(el?.createdAt)}</td>
+                <td>
+                  <Tags status={determineStatus(elIndex)} />
+                </td>
+                <Dropdown user={el} />
+              </tr>
             ))}
 
-          </tr>
-        </thead>
-        <tbody className={styles.Tbody}>
-          {userData.map((el, elIndex) => (
-            <tr key={elIndex}>
-              <td>{el?.orgName}</td>
-              <td>{el?.userName}</td>
-              <td>{el?.email}</td>
-              <td>{el?.phoneNumber}</td>
-              <td>{formatDate(el?.createdAt)}</td>
-              <td>
-                <Tags status={determineStatus(elIndex)} />
-              </td>
-              <Dropdown user={el} />
-            </tr>
-          ))}
+          </tbody>
+        </table>
+        {show && <Filters />}
+      </>}
 
-        </tbody>
-      </table>
-      {show && <Filters />}
     </section>
   </>;
 };

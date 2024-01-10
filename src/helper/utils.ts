@@ -50,3 +50,10 @@ export function formatDate(dateString: Date | string) {
   const date = new Date(dateString);
   return date.toLocaleDateString(undefined, options);
 }
+
+export function WithCommas(number: string) {
+  let numberString = number;
+
+  numberString = numberString?.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  return numberString;
+}

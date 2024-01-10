@@ -35,9 +35,11 @@ const UserViews: FC = () => {
                 ))}
             </section>
             <section>
-                <Table header={header} userData={currentUserData} />
+
+                <Table loading={loading} header={header} userData={currentUserData} />
             </section>
-            <Pagination />
+            {!loading && <Pagination />}
+
         </section>
     )
 }

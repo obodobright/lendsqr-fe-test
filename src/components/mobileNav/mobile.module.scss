@@ -1,0 +1,123 @@
+.mobileDropdown {
+  width: 200px;
+  max-width: 250px;
+  position: absolute;
+  // left: 33px;
+  right: 10px;
+  top: 60px;
+  background-color: #fff;
+  border-radius: 5px;
+  z-index: 199;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  background: #fff;
+  box-shadow: 3px 5px 20px 0px rgba(0, 0, 0, 0.04);
+  padding: 0.8rem 0.5rem;
+  p {
+    width: 100%;
+    padding: 0.8rem 0.9rem;
+    padding-left: 1.3rem;
+    color: #213f7d;
+    font-family: Work Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #f4f4f4;
+    }
+  }
+}
+
+.sidebarWrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  background-color: rgba(18, 21, 40, 0.3);
+
+  .sidebarContainer {
+    overflow-y: auto;
+    //   display: none;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.04);
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .logoWrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding-bottom: 2rem;
+
+      .fatimes {
+        margin-top: -7px;
+      }
+    }
+
+    .navItemTop {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      gap: 1rem;
+      padding-bottom: 2.1rem;
+      h3 {
+        color: #213f7d;
+        font-family: Work Sans;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration: none;
+      }
+    }
+
+    .navItem {
+      list-style-type: none;
+      .navHeader {
+        padding: 1rem 0.2rem;
+        color: #545f7d;
+        font-family: Work Sans;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0.7rem;
+      }
+
+      .navLink {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0.7rem;
+        padding: 0.7rem 0.2rem;
+        a {
+          color: #213f7d;
+          font-family: Work Sans;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

@@ -19,3 +19,14 @@
     }
   }
 }
+
+@media (max-width: 1145px) {
+  .layoutContainer {
+    .layoutFlex {
+      .outsetWrapper {
+        padding-right: 1rem;
+        padding-left: 1rem;
+      }
+    }
+  }
+}

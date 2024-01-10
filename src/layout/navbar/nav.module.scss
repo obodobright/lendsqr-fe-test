@@ -19,6 +19,19 @@
     align-items: center;
     justify-content: flex-start;
     column-gap: 12rem;
+
+    .logoWrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.7rem;
+
+      .fabars {
+        display: none;
+        margin-top: -7px;
+      }
+    }
+
     // gap: 6rem;
     .searchWrapper {
       border: 1px solid #d8dee8;
@@ -76,6 +89,43 @@
     }
     svg {
       cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 1145px) {
+  .navContainer {
+    .leftNavWrapper {
+      column-gap: 2rem;
+      .searchWrapper {
+        width: 250px;
+      }
+      .logoWrapper {
+        .fabars {
+          display: block !important;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .navContainer {
+    .leftNavWrapper {
+      .searchWrapper {
+        display: none;
+      }
+      .logoWrapper {
+        .fabars {
+          display: flex !important;
+        }
+      }
+    }
+    .rightNavWrapper {
+      a,
+      svg {
+        display: none;
+      }
     }
   }
 }
