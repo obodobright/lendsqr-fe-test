@@ -4,10 +4,10 @@ import { FC, useEffect, useMemo, useState } from "react";
 import styles from "./user.module.scss";
 import { AnalyticsData } from "@/helper/data";
 import Table from "@/components/table";
-import { userData } from "@/helper/data";
 import { Pagination } from "@/components/pagination/paginate";
 import { useGetUsers } from "@/hooks/useGetUser";
-// import Pagination from "@/components/pagination";
+
+
 const UserViews: FC = () => {
     const { user, getUsers, loading } = useGetUsers()
     const [currPage, setCurrPage] = useState(1);
@@ -38,7 +38,7 @@ const UserViews: FC = () => {
 
                 <Table loading={loading} header={header} userData={currentUserData} />
             </section>
-            {!loading && <Pagination />}
+            {!loading && <Pagination currPage={currPage} setCurrPage={setCurrPage} perPage={perPage} totalPage={user?.length} />}
 
         </section>
     )
