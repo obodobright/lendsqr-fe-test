@@ -8,11 +8,10 @@ import { useGetUserDetails } from "@/hooks/useGetUser";
 import { PageLoader } from "@/components/Loader";
 const UserDetails = () => {
     const router = useRouter();
-    const query = router.query.id;
+    const query: any = router.query.id;
     const { details, loading, getUsersDetails } = useGetUserDetails();
     const [currIndex, setCurrIndex] = useState(0)
     const tabs = ["General Details", "Documents", "Bank Details", "Loans", "Savings", "App and System"]
-    console.log(query, "some query")
     // render different component based on different conditions
     const renderContent = () => {
         switch (currIndex) {
@@ -44,7 +43,6 @@ const UserDetails = () => {
         if (router.isReady) {
             getUsersDetails(query)
         }
-
     }, [query])
 
     return <section className={styles.detailsContainer}>
