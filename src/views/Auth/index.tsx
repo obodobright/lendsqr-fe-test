@@ -44,8 +44,7 @@ export const AuthView = () => {
                         </section>
                         <p className={styles.pwdReset}>Forgot password</p>
                         <section className={styles.loginBtn}>
-                            <button>Login</button>
-
+                            <button onClick={() => router.push("/dashboard")}>Login</button>
                         </section>
                     </form>
 
