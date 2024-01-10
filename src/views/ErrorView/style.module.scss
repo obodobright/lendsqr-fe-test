@@ -1,0 +1,33 @@
+.errorContainer {
+  width: 100%;
+  min-height: 80vh;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  h3 {
+    color: #262626;
+    font-family: Segoe UI;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  button {
+    border: 0;
+    padding: 0.8rem 2rem;
+    margin-top: 0.7rem;
+    background-color: #213f7d;
+    border-radius: 5px;
+    color: #fff;
+
+    &:hover {
+      background-color: #0c4793;
+      transition: all 350ms;
+      cursor: pointer;
+    }
+  }
+}
